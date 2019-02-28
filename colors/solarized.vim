@@ -242,22 +242,22 @@ let colors_name = "solarized"
 " neutral gray monotone palette component)
 if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
-    let s:base03      = "#171f23"
-    let s:base02      = "#2a3136"
-    let s:base01      = "#636c71"
-    let s:base00      = "#70787e"
-    let s:base0       = "#899297"
-    let s:base1       = "#969fa5"
-    let s:base2       = "#e0eaf0"
-    let s:base3       = "#eef8fe"
+    let s:base03      = "#1b1b1b"
+    let s:base02      = "#303030"
+    let s:base01      = "#6a6a6a"
+    let s:base00      = "#767676"
+    let s:base0       = "#909090"
+    let s:base1       = "#9d9d9d"
+    let s:base2       = "#e8e8e8"
+    let s:base3       = "#f6f6f6"
     let s:yellow      = "#b58900"
     let s:orange      = "#cb4b16"
     let s:red         = "#dc322f"
     let s:magenta     = "#d33682"
     let s:violet      = "#6c71c4"
-    let s:blue        = "#268bd2"
-    let s:cyan        = "#2aa198"
-    let s:green       = "#749901" "experimental
+    let s:blue        = "#2b8dd2"
+    let s:cyan        = "#33a199"
+    let s:green       = "#749901"
 elseif (has("gui_running") && g:solarized_degrade == 1)
     " These colors are identical to the 256 color mode. They may be viewed
     " while in gui mode via "let g:solarized_degrade=1", though this is not
@@ -318,22 +318,6 @@ elseif g:solarized_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
-"   let s:base03      = "0".s:bright
-"   let s:base02      = "0"
-"   let s:base01      = "2".s:bright
-"   let s:base00      = "3".s:bright
-"   let s:base0       = "4".s:bright
-"   let s:base1       = "6".s:bright
-"   let s:base2       = "7"
-"   let s:base3       = "7".s:bright
-"   let s:yellow      = "3"
-"   let s:orange      = "1".s:bright
-"   let s:red         = "1"
-"   let s:magenta     = "5"
-"   let s:violet      = "5".s:bright
-"   let s:blue        = "4"
-"   let s:cyan        = "6"
-"   let s:green       = "2"
     let s:base03      = "DarkGray"      " 0*
     let s:base02      = "Black"         " 0
     let s:base01      = "LightGreen"    " 2*
@@ -544,12 +528,13 @@ exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
 "       *Constant        any constant
 "        String          a string constant: "this is a string"
 "        Character       a character constant: 'c', '\n'
-"        Number          a number constant: 234, 0xff
 "        Boolean         a boolean constant: TRUE, false
-"        Float           a floating point constant: 2.3e10
 
 exe "hi! Number"         .s:fmt_none   .s:fg_green   .s:bg_none
+"       *Number          a number constant: 234, 0xff
+
 exe "hi! Float"          .s:fmt_none   .s:fg_green   .s:bg_none
+"       *Float           a floating point constant: 2.3e10
 
 exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
 "       *Identifier      any variable name
